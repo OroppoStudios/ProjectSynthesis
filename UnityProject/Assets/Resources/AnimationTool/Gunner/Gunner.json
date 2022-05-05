@@ -1,0 +1,2584 @@
+
+[
+    {
+        "name" : "Idle",
+        "frameRate" : 12.0,
+        "loop"      : true,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "IdleTurn",
+        "frameRate" : 18.0,
+        "loop"      : false,
+        "events"    : [
+            {
+                "type" : "SetState",
+                "frame" : 2,
+                "parameters" : [
+                    {
+                        "name" : "name",
+                        "value" : "PreRun"
+                    },
+                    {
+                        "name" : "conditional",
+                        "value" : "movingSameRawDirection"
+                    }
+                ],
+                "visibleInEditor" : true
+            }
+        ],
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true
+    },
+    {
+        "name" : "Run",
+        "frameRate" : 8.0,
+        "loop"      : true,
+        "events"    : [
+        ],
+        "visibleInEditor" : true,
+        "eventsVisibleInEditor" : true
+    },
+    {
+        "name" : "RunStop",
+        "frameRate" : 20.0,
+        "loop"      : false,
+        "events"    : [
+        ],
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true
+    },
+    {
+        "name" : "PreRun",
+        "frameRate" : 26.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+        ]
+    },
+    {
+        "name" : "RunTurn",
+        "frameRate" : 22.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "AddForce",
+                "frame" : 1,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "0.5,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 2,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "0.5,0"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "JumpIdleLanding",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+        ]
+    },
+    {
+        "name" : "JumpRunLanding",
+        "frameRate" : 40.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+        ]
+    },
+    {
+        "name" : "UpJump",
+        "frameRate" : 20.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+        ]
+    },
+    {
+        "name" : "DownJump",
+        "frameRate" : 20.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "AirJump",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "ReleaseActions",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "StrongPunchNormal",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false,
+        "events"                : [
+            {
+                "type" : "DisableMovement",
+                "frame" : 1,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            },
+            {
+                "type" : "ReleaseMovement",
+                "frame" : 5,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "x",
+                        "value" : "0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 1,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "3,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 2,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "2,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "1,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AttackTime",
+                "frame" : 3,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.2"
+                    }
+                ]
+            },
+            {
+                "type" : "Vfx",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "FrontRedVfx"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "Basic"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "0.7,0.7"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "1,-0.2"
+                    },
+                    {
+                        "name" : "rotation",
+                        "value" : "4"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "StrongPunchNormalBack",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "events"    : [
+            {
+                "type" : "DisableMovement",
+                "frame" : 1,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            },
+            {
+                "type" : "ReleaseMovement",
+                "frame" : 5,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 1,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "3,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 2,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "2,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "1,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AttackTime",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.2"
+                    }
+                ]
+            },
+            {
+                "type" : "Vfx",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "FrontRedVfx"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "Basic"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "1,1"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "1,-0.2"
+                    },
+                    {
+                        "name" : "rotation",
+                        "value" : "4"
+                    }
+                ]
+            }
+        ],
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true
+    },
+    {
+        "name" : "SpecialAttackNormal",
+        "frameRate" : 17.0,
+        "loop"      : false,
+        "events"    : [
+            {
+                "type" : "Vfx",
+                "frame" : 5,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "FrontBlueVfx"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "PushAttack"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "1,1"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "2.18,-0.25"
+                    },
+                    {
+                        "name" : "rotation",
+                        "value" : "3"
+                    }
+                ]
+            },
+            {
+                "type" : "AttackTime",
+                "frame" : 5,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "3"
+                    }
+                ]
+            }
+        ],
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true
+    },
+    {
+        "name" : "LightPunchDownBack",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "events"    : [
+            {
+                "type" : "Vfx",
+                "frame" : 5,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "FrontBlueVfx"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "PushAttack"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "1,1"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "2.18,-0.25"
+                    },
+                    {
+                        "name" : "rotation",
+                        "value" : "3"
+                    }
+                ]
+            },
+            {
+                "type" : "AttackTime",
+                "frame" : 5,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.2"
+                    }
+                ]
+            }
+        ],
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "StrongPunchUp",
+        "frameRate" : 18.0,
+        "loop"      : false,
+        "events"    : [
+            {
+                "type" : "AttackTime",
+                "frame" : 4,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.6"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "2,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "2,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 5,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "2,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 6,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "2,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 7,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "2,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 8,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "1,0"
+                    }
+                ]
+            },
+            {
+                "type" : "Vfx",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "FrontRedVfx"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "SlashUp"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "0.65,0.65"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "0.4,0.2"
+                    },
+                    {
+                        "name" : "rotation",
+                        "value" : "0"
+                    }
+                ]
+            }
+        ],
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true
+    },
+    {
+        "name" : "StrongPunchUpBack",
+        "frameRate" : 18.0,
+        "loop"      : false,
+        "events"    : [
+            {
+                "type" : "AttackTime",
+                "frame" : 4,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.6"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "2,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "2,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 5,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "2,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 6,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "2,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 7,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "2,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 8,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "1,0"
+                    }
+                ]
+            },
+            {
+                "type" : "Vfx",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "FrontRedVfx"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "SlashUp"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "0.65,0.65"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "0.4,0.2"
+                    },
+                    {
+                        "name" : "rotation",
+                        "value" : "0"
+                    }
+                ]
+            }
+        ],
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true
+    },
+    {
+        "name" : "LightPunchNormal",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "events"    : [
+            {
+                "type" : "AttackTime",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.2"
+                    }
+                ]
+            },
+            {
+                "type" : "ReleaseMovement",
+                "frame" : 5,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            },
+            {
+                "type" : "Vfx",
+                "frame" : 3,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "FrontBlueVfx"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "Basic"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "0.65,0.65"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "0.8,-0.2"
+                    },
+                    {
+                        "name" : "rotation",
+                        "value" : "-10"
+                    }
+                ]
+            }
+        ],
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true
+    },
+    {
+        "name" : "LightPunchNormalBack",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "events"    : [
+            {
+                "type" : "AttackTime",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.2"
+                    }
+                ]
+            },
+            {
+                "type" : "ReleaseMovement",
+                "frame" : 5,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            },
+            {
+                "type" : "Vfx",
+                "frame" : 3,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "BackBlueVfx"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "Basic"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "0.65,0.65"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "0.6,-0.2"
+                    },
+                    {
+                        "name" : "rotation",
+                        "value" : "-25"
+                    }
+                ]
+            }
+        ],
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true
+    },
+    {
+        "name" : "StrongPunchDown",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "events"    : [
+            {
+                "type" : "Vfx",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "Slash"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "1, 1"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "0.05, -0.4"
+                    },
+                    {
+                        "name" : "rotation",
+                        "value" : "-12"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "Light"
+                    }
+                ]
+            },
+            {
+                "type" : "AttackTime",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.5"
+                    }
+                ]
+            },
+            {
+                "type" : "Sfx",
+                "frame" : 2,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "sword_lightswish"
+                    },
+                    {
+                        "name" : "volume",
+                        "value" : "0.35"
+                    }
+                ]
+            },
+            {
+                "type" : "Sfx",
+                "frame" : 1,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "one_stop"
+                    },
+                    {
+                        "name" : "volume",
+                        "value" : "0.15"
+                    },
+                    {
+                        "name" : "conditional",
+                        "value" : "minXSpeed"
+                    },
+                    {
+                        "name" : "conditionalValue",
+                        "value" : "0.8"
+                    }
+                ]
+            },
+            {
+                "type" : "Vfx",
+                "frame" : 1,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "Dust"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "Run"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "-0.6, 0.6"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "1, -0.99"
+                    },
+                    {
+                        "name" : "conditional",
+                        "value" : "minXSpeed"
+                    },
+                    {
+                        "name" : "conditionalValue",
+                        "value" : "0.8"
+                    }
+                ]
+            },
+            {
+                "type" : "ReleaseMovement",
+                "frame" : 7,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            }
+        ],
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true
+    },
+    {
+        "name" : "StrongPunchDownBack",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "events"    : [
+            {
+                "type" : "Vfx",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "Slash"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "1, -1"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "0.05, -0.4"
+                    },
+                    {
+                        "name" : "rotation",
+                        "value" : "-12"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "Light"
+                    }
+                ]
+            },
+            {
+                "type" : "AttackTime",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.5"
+                    }
+                ]
+            },
+            {
+                "type" : "Sfx",
+                "frame" : 2,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "sword_lightswish"
+                    },
+                    {
+                        "name" : "volume",
+                        "value" : "0.35"
+                    }
+                ]
+            },
+            {
+                "type" : "Sfx",
+                "frame" : 1,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "one_stop"
+                    },
+                    {
+                        "name" : "volume",
+                        "value" : "0.15"
+                    },
+                    {
+                        "name" : "conditional",
+                        "value" : "minXSpeed"
+                    },
+                    {
+                        "name" : "conditionalValue",
+                        "value" : "0.8"
+                    }
+                ]
+            },
+            {
+                "type" : "Vfx",
+                "frame" : 1,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "Dust"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "Run"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "-0.6, 0.6"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "1, -0.99"
+                    },
+                    {
+                        "name" : "conditional",
+                        "value" : "minXSpeed"
+                    },
+                    {
+                        "name" : "conditionalValue",
+                        "value" : "0.8"
+                    }
+                ]
+            },
+            {
+                "type" : "ReleaseMovement",
+                "frame" : 7,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            }
+        ],
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true
+    },
+    {
+        "name" : "LightPunchUp",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "events"    : [
+            {
+                "type" : "Vfx",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "Slash"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "1, 1"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "0.05, -0.1"
+                    },
+                    {
+                        "name" : "rotation",
+                        "value" : "12"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "Light"
+                    }
+                ]
+            },
+            {
+                "type" : "AttackTime",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.5"
+                    }
+                ]
+            },
+            {
+                "type" : "Sfx",
+                "frame" : 2,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "sword_lightswish"
+                    },
+                    {
+                        "name" : "volume",
+                        "value" : "0.35"
+                    }
+                ]
+            },
+            {
+                "type" : "Sfx",
+                "frame" : 1,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "one_stop"
+                    },
+                    {
+                        "name" : "volume",
+                        "value" : "0.15"
+                    },
+                    {
+                        "name" : "conditional",
+                        "value" : "minXSpeed"
+                    },
+                    {
+                        "name" : "conditionalValue",
+                        "value" : "0.8"
+                    }
+                ]
+            },
+            {
+                "type" : "Vfx",
+                "frame" : 1,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "Dust"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "Run"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "-0.6, 0.6"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "1, -0.99"
+                    },
+                    {
+                        "name" : "conditional",
+                        "value" : "minXSpeed"
+                    },
+                    {
+                        "name" : "conditionalValue",
+                        "value" : "0.8"
+                    }
+                ]
+            },
+            {
+                "type" : "ReleaseMovement",
+                "frame" : 7,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            }
+        ],
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true
+    },
+    {
+        "name" : "LightPunchUpBack",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "events"    : [
+            {
+                "type" : "Vfx",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "Slash"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "1, -1"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "0.05, -0.1"
+                    },
+                    {
+                        "name" : "rotation",
+                        "value" : "12"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "Light"
+                    }
+                ]
+            },
+            {
+                "type" : "AttackTime",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.5"
+                    }
+                ]
+            },
+            {
+                "type" : "Sfx",
+                "frame" : 2,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "sword_lightswish"
+                    },
+                    {
+                        "name" : "volume",
+                        "value" : "0.35"
+                    }
+                ]
+            },
+            {
+                "type" : "Sfx",
+                "frame" : 1,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "one_stop"
+                    },
+                    {
+                        "name" : "volume",
+                        "value" : "0.15"
+                    },
+                    {
+                        "name" : "conditional",
+                        "value" : "minXSpeed"
+                    },
+                    {
+                        "name" : "conditionalValue",
+                        "value" : "0.8"
+                    }
+                ]
+            },
+            {
+                "type" : "Vfx",
+                "frame" : 1,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "Dust"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "Run"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "-0.6, 0.6"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "1, -0.99"
+                    },
+                    {
+                        "name" : "conditional",
+                        "value" : "minXSpeed"
+                    },
+                    {
+                        "name" : "conditionalValue",
+                        "value" : "0.8"
+                    }
+                ]
+            },
+            {
+                "type" : "ReleaseMovement",
+                "frame" : 7,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            }
+        ],
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true
+    },
+    {
+        "name" : "DodgeBack",
+        "frameRate" : 18.0,
+        "loop"      : false,
+        "events"    : [
+            {
+                "type" : "ReleaseActions",
+                "frame" : 7,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "-4, 0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "-4.5, 0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 5,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "-4, 0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 6,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "-3, 0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 7,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "-3, 0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 8,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "-3, 0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 9,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "-1.5, 0"
+                    }
+                ]
+            },
+            {
+                "type" : "Sfx",
+                "frame" : 1,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "one_roll"
+                    },
+                    {
+                        "name" : "volume",
+                        "value" : "0.15"
+                    }
+                ]
+            },
+            {
+                "type" : "Sfx",
+                "frame" : 6,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "one_preroll"
+                    },
+                    {
+                        "name" : "volume",
+                        "value" : "0.2"
+                    }
+                ]
+            }
+        ],
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "DodgeBackTurn",
+        "frameRate" : 23.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "AddForce",
+                "frame" : 5,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "5.5, 0"
+                    },
+                    {
+                        "name" : "conditional",
+                        "value" : "moving"
+                    }
+                ]
+            },
+            {
+                "type" : "Sfx",
+                "frame" : 1,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "one_slide"
+                    },
+                    {
+                        "name" : "volume",
+                        "value" : "0.3"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 1,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "-1, 0"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "DodgeFront",
+        "frameRate" : 18.0,
+        "loop"      : false,
+        "events"    : [
+            {
+                "type" : "SetState",
+                "frame" : 10,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "Run"
+                    },
+                    {
+                        "name" : "conditional",
+                        "value" : "movingSameRawDirection"
+                    }
+                ]
+            },
+            {
+                "type" : "ReleaseActions",
+                "frame" : 7,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            },
+            {
+                "type" : "Move",
+                "frame" : 9,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "x",
+                        "value" : "0"
+                    },
+                    {
+                        "name" : "conditional",
+                        "value" : "notRawMoving"
+                    }
+                ]
+            },
+            {
+                "type" : "Move",
+                "frame" : 10,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "x",
+                        "value" : "0"
+                    },
+                    {
+                        "name" : "conditional",
+                        "value" : "notRawMoving"
+                    }
+                ]
+            },
+            {
+                "type" : "Move",
+                "frame" : 10,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "x",
+                        "value" : "0"
+                    },
+                    {
+                        "name" : "conditional",
+                        "value" : "movingOppositeRawDirection"
+                    }
+                ]
+            },
+            {
+                "type" : "Sfx",
+                "frame" : 1,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "one_preroll"
+                    },
+                    {
+                        "name" : "volume",
+                        "value" : "0.2"
+                    }
+                ]
+            },
+            {
+                "type" : "Sfx",
+                "frame" : 6,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "one_roll"
+                    },
+                    {
+                        "name" : "volume",
+                        "value" : "0.15"
+                    }
+                ]
+            }
+        ],
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "Hit",
+        "frameRate" : 17.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "ReleaseActions",
+                "frame" : 2,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "HitBack",
+        "frameRate" : 17.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "ReleaseActions",
+                "frame" : 2,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "HitUp",
+        "frameRate" : 17.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "ReleaseActions",
+                "frame" : 6,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "HitUpBack",
+        "frameRate" : 17.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "ReleaseActions",
+                "frame" : 6,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "Death",
+        "frameRate" : 15,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "LightAirPunch",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "AttackTime",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "LightAirPunchBack",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false,
+        "events"                : [
+            {
+                "type" : "AttackTime",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "LightAirPunchDown",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "AttackTime",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.3"
+                    }
+                ]
+            },
+            {
+                "type" : "Sfx",
+                "frame" : 2,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "sword_lightswish"
+                    },
+                    {
+                        "name" : "volume",
+                        "value" : "0.35"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "LightAirPunchDownBack",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "AttackTime",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.3"
+                    }
+                ]
+            },
+            {
+                "type" : "Sfx",
+                "frame" : 2,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "sword_lightswish"
+                    },
+                    {
+                        "name" : "volume",
+                        "value" : "0.35"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "StrongAirPunch",
+        "frameRate" : 18.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "AttackTime",
+                "frame" : 3,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "StrongAirPunchDown",
+        "frameRate" : 18.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "AttackTime",
+                "frame" : 3,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "DodgeToIdle",
+        "frameRate" : 17,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+        ]
+    },
+    {
+        "name" : "Block",
+        "frameRate" : 18.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+        ]
+    },
+    {
+        "name" : "BlockToIdle",
+        "frameRate" : 18.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "ReleaseActions",
+                "frame" : 2,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "BlockHold",
+        "frameRate" : 12.0,
+        "loop"      : true,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+        ]
+    },
+    {
+        "name" : "AirBlock",
+        "frameRate" : 18.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "AirBlockDownJump",
+        "frameRate" : 18.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "AirBlockHold",
+        "frameRate" : 20.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "AirTriggerAttack",
+        "frameRate" : 17.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "AttackTime",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.9"
+                    }
+                ]
+            },
+            {
+                "type" : "ReleaseMovement",
+                "frame" : 6,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            },
+            {
+                "type" : "Sfx",
+                "frame" : 2,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "sword_strongswish"
+                    },
+                    {
+                        "name" : "volume",
+                        "value" : "0.3"
+                    }
+                ]
+            },
+            {
+                "type" : "Vfx",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "Slash"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "0.2, 0.2"
+                    },
+                    {
+                        "name" : "rotation",
+                        "value" : "10"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "Up"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "LightPunchDown",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "AttackTime",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.9"
+                    },
+                    {
+                        "name" : "extra",
+                        "value" : "true"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "SpecialAttackUp",
+        "frameRate" : 1.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "SpecialAttackDown",
+        "frameRate" : 1.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "SpecialAttack2Normal",
+        "frameRate" : 17.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "ReleaseMovement",
+                "frame" : 9,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            },
+            {
+                "type" : "AttackTime",
+                "frame" : 6,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.9"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "SpecialAttack2Up",
+        "frameRate" : 17.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "ReleaseMovement",
+                "frame" : 9,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            },
+            {
+                "type" : "AttackTime",
+                "frame" : 6,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.9"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "SpecialAttack2Down",
+        "frameRate" : 1.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "SpecialAttack3Normal",
+        "frameRate" : 18.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "RepeatFrame",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            },
+            {
+                "type" : "RepeatFrame",
+                "frame" : 12,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "count",
+                        "value" : "2"
+                    }
+                ]
+            },
+            {
+                "type" : "AttackTime",
+                "frame" : 11,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.9"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "SpecialAirAttackNormal",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "AttackTime",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.3"
+                    }
+                ]
+            },
+            {
+                "type" : "Sfx",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "sword_strongswish"
+                    },
+                    {
+                        "name" : "volume",
+                        "value" : "0.4"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "SpecialAirAttackUp",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+        ]
+    },
+    {
+        "name" : "SpecialAirAttackDown",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+        ]
+    },
+    {
+        "name" : "SpecialAirAttack2Normal",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "AttackTime",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "SpecialAirAttack2Up",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "AttackTime",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "SpecialAirAttack2Down",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "AttackTime",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "SpecialAirAttack3Down",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "AttackTime",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.3"
+                    }
+                ]
+            },
+            {
+                "type" : "FreezeMovement",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "axis",
+                        "value" : "y"
+                    }
+                ]
+            },
+            {
+                "type" : "UnFreezeMovement",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "12, -5"
+                    }
+                ]
+            },
+            {
+                "type" : "Move",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "x",
+                        "value" : "1"
+                    }
+                ]
+            },
+            {
+                "type" : "Move",
+                "frame" : 5,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "x",
+                        "value" : "1"
+                    }
+                ]
+            },
+            {
+                "type" : "Move",
+                "frame" : 6,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "x",
+                        "value" : "1"
+                    }
+                ]
+            },
+            {
+                "type" : "Move",
+                "frame" : 7,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "x",
+                        "value" : "1"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "SpecialAirAttack3Normal",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "AttackTime",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "1.3"
+                    }
+                ]
+            },
+            {
+                "type" : "FreezeMovement",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "axis",
+                        "value" : "y"
+                    }
+                ]
+            },
+            {
+                "type" : "UnFreezeMovement",
+                "frame" : 5,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "12, 0"
+                    }
+                ]
+            },
+            {
+                "type" : "Move",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "x",
+                        "value" : "1"
+                    }
+                ]
+            },
+            {
+                "type" : "Move",
+                "frame" : 5,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "x",
+                        "value" : "1"
+                    }
+                ]
+            },
+            {
+                "type" : "Move",
+                "frame" : 6,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "x",
+                        "value" : "1"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "TestPunch",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "TestKick",
+        "frameRate" : 15.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "AddForce",
+                "frame" : 1,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "2.5,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 2,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "1.5,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 3,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "0.5,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 4,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "2.7,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 5,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "1.8,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 6,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "1.5,0"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 7,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "1,0"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "TestPunchBack",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "TestKickBack",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "IdleToRun",
+        "frameRate" : 1.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "Taunt",
+        "frameRate" : 1.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "AirFinisherHitGround",
+        "frameRate" : 1.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "AirTriggerHit",
+        "frameRate" : 1.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "AirHit",
+        "frameRate" : 1.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "AirHitBack",
+        "frameRate" : 1.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "AirFinisherHit",
+        "frameRate" : 1.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "GroundFinisherHit",
+        "frameRate" : 1.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "AirFinisherGroundHit",
+        "frameRate" : 1.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "GroundFinisherDeath",
+        "frameRate" : 1.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "AirFinisherHitGroundDeath",
+        "frameRate" : 1.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "AirFinisherHitGroundHit",
+        "frameRate" : 1.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "Vaulting",
+        "frameRate" : 15.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "FreezeMovement",
+                "frame" : 1,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            },
+            {
+                "type" : "UnFreezeMovement",
+                "frame" : 4,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                ]
+            },
+            {
+                "type" : "PositionMove",
+                "frame" : 2,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "offset",
+                        "value" : "0,0.8"
+                    }
+                ]
+            },
+            {
+                "type" : "PositionMove",
+                "frame" : 3,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "offset",
+                        "value" : "0,0.4"
+                    }
+                ]
+            },
+            {
+                "type" : "PositionMove",
+                "frame" : 5,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "offset",
+                        "value" : "0,0.8"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 4,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "3.5,1.5"
+                    }
+                ]
+            },
+            {
+                "type" : "AddForce",
+                "frame" : 5,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "force",
+                        "value" : "3.5,3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "BigFall",
+        "frameRate" : 12.0,
+        "loop"      : true,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    }
+]

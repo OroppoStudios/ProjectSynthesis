@@ -1,0 +1,22 @@
+{
+"loading": "Chargement",
+"defaults": "Rétablir",
+"startScreen": "Appuyez sur une touche pour continuer",
+"startGame": "Jouer",
+"achievements": "Succès",
+"settings": "Réglages",
+"exitGame": "Quitter",
+"soundEffectsVolume": "Volume des effets",
+"masterVolume": "Volume principal",
+"musicVolume": "Volume de la musique",
+"windowMode": "Mode fenêtré",
+"screenResolution": "Résolution d'Écran",
+"left": "Izquierda",
+"right": "Derecha",
+"up": "Arriba",
+"down": "Abajo",
+"jump": "Saltar",
+"lightPunch": "Ataque 1",
+"strongPunch": "Ataque 2",
+"special1": "Ataque 3"
+}

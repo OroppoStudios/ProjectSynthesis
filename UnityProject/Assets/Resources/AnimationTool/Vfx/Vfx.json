@@ -1,0 +1,59 @@
+
+[
+    {
+        "name" : "Basic",
+        "frameRate" : 24.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "SlashUp",
+        "frameRate" : 24.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "ElectricSphere",
+        "frameRate" : 18.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "ElectricShot",
+        "frameRate" : 18.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "ElectricShot2",
+        "frameRate" : 24.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "ElectricShot3",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true
+    },
+    {
+        "name" : "OrbIdle",
+        "frameRate" : 14.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "PushAttack",
+        "frameRate" : 20.0,
+        "loop"      : false,
+        "visibleInEditor" : true,
+        "eventsVisibleInEditor" : false
+    }
+]

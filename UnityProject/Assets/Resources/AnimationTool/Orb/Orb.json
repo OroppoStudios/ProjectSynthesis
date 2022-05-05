@@ -1,0 +1,561 @@
+
+[
+    {
+        "name" : "AirJump",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "DownJump",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "Idle",
+        "frameRate" : 14.0,
+        "loop"      : true,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "Vfx",
+                "frame" : 1,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "OrbVfx"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "OrbIdle"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "1,1"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "0,0"
+                    },
+                    {
+                        "name" : "isChild",
+                        "value" : "true"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "Run",
+        "frameRate" : 12.0,
+        "loop"      : true,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "Vfx",
+                "frame" : 4,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "FrontBlueVfx"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "ElectricSphere"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "0.42,0.27"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "0,0"
+                    },
+                    {
+                        "name" : "isChild",
+                        "value" : "true"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "TestKick",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "TestKickBack",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "TestPunch",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "TestPunchBack",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "UpJump",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "BigFall",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "Hit",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : true,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "Pause",
+                "frame" : 1,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "duration",
+                        "value" : "0.05"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "HitBack",
+        "frameRate" : 16.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "HitUp",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "HitUpBack",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "IdleTurn",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "JumpIdleLanding",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "JumpRunLanding",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "LightAirPunch",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "LightAirPunchBack",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "LightPunchNormal",
+        "frameRate" : 21.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "AttackTime",
+                "frame" : 21,
+                "visibleInEditor" : true,
+                "parameters"      : [
+                    {
+                        "name" : "range",
+                        "value" : "3"
+                    }
+                ]
+            },
+            {
+                "type" : "RepeatFrame",
+                "frame" : 19,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "count",
+                        "value" : "2"
+                    }
+                ]
+            },
+            {
+                "type" : "Vfx",
+                "frame" : 1,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "FrontBlueVfx"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "ElectricSphere"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "0.42,0.27"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "0,-0.05"
+                    },
+                    {
+                        "name" : "isChild",
+                        "value" : "true"
+                    },
+                    {
+                        "name" : "rotation",
+                        "value" : "-90"
+                    }
+                ]
+            },
+            {
+                "type" : "Vfx",
+                "frame" : 8,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "FrontBlueVfx"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "ElectricSphere"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "0.42,0.27"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "0,-0.05"
+                    },
+                    {
+                        "name" : "isChild",
+                        "value" : "true"
+                    },
+                    {
+                        "name" : "rotation",
+                        "value" : "-90"
+                    }
+                ]
+            },
+            {
+                "type" : "Custom",
+                "frame" : 19,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "FrontBlueVfx"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "ElectricShot2"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "0.35,0.35"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "1.85,-0.08"
+                    },
+                    {
+                        "name" : "isChild",
+                        "value" : "true"
+                    }
+                ]
+            },
+            {
+                "type" : "Vfx",
+                "frame" : 19,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "FrontOrangeVfx"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "ElectricShot3"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "0.35,0.35"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "1.85,-0.07"
+                    }
+                ]
+            },
+            {
+                "type" : "Vfx",
+                "frame" : 19,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "FrontBlueVfx"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "ElectricShot"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "0.35,0.5"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "1.85,-0.07"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "LightPunchNormalBack",
+        "frameRate" : 21.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : true,
+        "events"                : [
+            {
+                "type" : "AttackTime",
+                "frame" : 2,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                ]
+            },
+            {
+                "type" : "RepeatFrame",
+                "frame" : 19,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "count",
+                        "value" : "2"
+                    }
+                ]
+            },
+            {
+                "type" : "Vfx",
+                "frame" : 1,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "FrontBlueVfx"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "ElectricSphere"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "0.42,0.27"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "0,-0.05"
+                    },
+                    {
+                        "name" : "isChild",
+                        "value" : "true"
+                    },
+                    {
+                        "name" : "rotation",
+                        "value" : "-90"
+                    }
+                ]
+            },
+            {
+                "type" : "Vfx",
+                "frame" : 8,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "FrontBlueVfx"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "ElectricSphere"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "0.42,0.27"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "0,-0.05"
+                    },
+                    {
+                        "name" : "isChild",
+                        "value" : "true"
+                    },
+                    {
+                        "name" : "rotation",
+                        "value" : "-90"
+                    }
+                ]
+            },
+            {
+                "type" : "Vfx",
+                "frame" : 19,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "FrontBlueVfx"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "ElectricShot"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "0.35,0.35"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "1.85,-0.07"
+                    }
+                ]
+            },
+            {
+                "type" : "Vfx",
+                "frame" : 19,
+                "visibleInEditor" : false,
+                "parameters"      : [
+                    {
+                        "name" : "name",
+                        "value" : "FrontOrangeVfx"
+                    },
+                    {
+                        "name" : "animation",
+                        "value" : "ElectricShot3"
+                    },
+                    {
+                        "name" : "scale",
+                        "value" : "0.35,0.35"
+                    },
+                    {
+                        "name" : "position",
+                        "value" : "1.85,-0.07"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name" : "PreRun",
+        "frameRate" : 1.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "RunStop",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "RunTurn",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "StrongAirPunch",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "StrongPunchNormal",
+        "frameRate" : 1.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "StrongPunchNormalBack",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "StrongPunchUp",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "StrongPunchUpBack",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "Vaulting",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "Death",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    },
+    {
+        "name" : "SpecialAirAttackNormal",
+        "frameRate" : 1,
+        "loop"      : false,
+        "visibleInEditor" : false
+    }
+]

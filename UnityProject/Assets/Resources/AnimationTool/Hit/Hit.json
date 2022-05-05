@@ -1,0 +1,17 @@
+
+[
+    {
+        "name" : "A",
+        "frameRate" : 24.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    },
+    {
+        "name" : "B",
+        "frameRate" : 24.0,
+        "loop"      : false,
+        "visibleInEditor" : false,
+        "eventsVisibleInEditor" : false
+    }
+]

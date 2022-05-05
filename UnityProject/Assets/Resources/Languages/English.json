@@ -1,0 +1,23 @@
+{
+"achievements": "Achievements",    
+"ambienceVolume": "Ambience volume", 
+"masterVolume": "Master volume", 
+"defaults": "Reset",
+"loading": "Loading",
+"exitGame": "Exit game", 
+"musicVolume": "Music volume",
+"screenResolution": "Screen Resolution",
+"settings": "Settings",
+"soundEffectsVolume": "Sound effects volume",
+"startGame": "Start game",
+"startScreen": "Press any button/key to continue",
+"windowMode": "Window mode",
+"left": "Left",
+"right": "Right",
+"up": "Up",
+"down": "Down",
+"jump": "Jump",
+"lightPunch": "Attack 1",
+"strongPunch": "Attack 2",
+"special1": "Attack 3"
+}

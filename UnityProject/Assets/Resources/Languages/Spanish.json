@@ -1,0 +1,22 @@
+{
+"achievements": "Logros",    
+"defaults": "Restrablecer",
+"exitGame": "Salir del juego",
+"loading": "Cargando",
+"musicVolume": "Volumen de música",
+"masterVolume": "Volumen maestro",
+"screenResolution": "Resolución de pantalla",
+"settings": "Opciones",
+"soundEffectsVolume": "Volumen de efectos de sonido",
+"startGame": "Iniciar partida",
+"startScreen": "Presiona cualquier tecla/botón para continuar",
+"windowMode": "Modo de ventana",
+"left": "Izquierda",
+"right": "Derecha",
+"up": "Arriba",
+"down": "Abajo",
+"jump": "Saltar",
+"lightPunch": "Ataque 1",
+"strongPunch": "Ataque 2",
+"special1": "Ataque 3"
+}

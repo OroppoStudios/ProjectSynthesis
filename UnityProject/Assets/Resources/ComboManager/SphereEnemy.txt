@@ -1,0 +1,6 @@
+// * are assisted progressions
+LP,LP,SP
+LP,LP,LP,SP
+LP,LP,SP,SPU
+LP,SP,SPU
+SP,LP,SPU
