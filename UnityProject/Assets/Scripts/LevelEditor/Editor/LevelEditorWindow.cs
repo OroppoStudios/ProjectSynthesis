@@ -137,7 +137,7 @@ namespace Warner.LevelEditor
 			drawSelectors();
 			drawSelectedObjectPanel();
 
-			if (GUI.Button(new Rect(3, windowSize.y - 40, 172, 36), "Guardar"))
+			if (GUI.Button(new Rect(3, windowSize.y - 40, 172, 36), "Save"))
 				{
 				save();
 				}
