@@ -40,6 +40,7 @@ namespace Warner
 		[NonSerialized] public List<ComboManager.Attack> currentCombo = new List<ComboManager.Attack>();
 		[NonSerialized] public ComboManager.ComboStatus currentComboStatus;
 
+		[SerializeField] private GameObject HitEffect = null;
 
 		[Serializable]
 		public class ReceiverData
@@ -522,8 +523,9 @@ namespace Warner
 
 			character.control.clearAttacksBuffer();
 			character.takeDamage(damage);
-
-            currentAttacker = attacker;
+			//Spawn Particle System
+			SpawnHitEffect(transform.position);
+			currentAttacker = attacker;
             receivingDamage = true;
             currentReceivedAttackDirection = hitDirection;
             currentReceivedAttack = attacker.attacks.currentAttack;
@@ -712,6 +714,11 @@ namespace Warner
 					? CharacterState.GroundFinisherDeath : CharacterState.GroundFinisherHit, false);
 				}
 			}
+		// Function for Spawning in a Particle Effect Prefab
+		private void SpawnHitEffect(Vector3 position)
+       {
+			Instantiate(HitEffect, position, Quaternion.identity);
+       }
 
 		#endregion
 
